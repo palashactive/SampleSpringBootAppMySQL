@@ -2,10 +2,10 @@
 Sample Spring Boot application with MySQL DB connection
 
 ## MySQL DB Scripts
-1. Create Database/Schema
+### 1. Create Database/Schema
 create schema testdb
 
-2. Create table
+### 2. Create table
 CREATE TABLE `employee` (
   `id` int NOT NULL,
   `name` varchar(45) DEFAULT NULL,
