@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "317b29e3-dbbf-4863-b02f-9568d68c1983",
+		"name": "Sample Sprin Boot App with mysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "WM_KRAKEN.APP_ID",
+						"value": "bf92cbb4-a81f-4cdc-b22f-74552dfdae8e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "WM_QOS.CORRELATION_ID",
+						"value": "1234"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/test/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "WM_KRAKEN.APP_ID",
+						"value": "bf92cbb4-a81f-4cdc-b22f-74552dfdae8e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "WM_QOS.CORRELATION_ID",
+						"value": "1234"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"Saurabh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "WM_KRAKEN.APP_ID",
+						"value": "bf92cbb4-a81f-4cdc-b22f-74552dfdae8e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "WM_QOS.CORRELATION_ID",
+						"value": "1234"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"Saurabh Punekar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "WM_KRAKEN.APP_ID",
+						"value": "bf92cbb4-a81f-4cdc-b22f-74552dfdae8e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "WM_QOS.CORRELATION_ID",
+						"value": "1234"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/test/employee?id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "WM_KRAKEN.APP_ID",
+						"value": "bf92cbb4-a81f-4cdc-b22f-74552dfdae8e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "WM_QOS.CORRELATION_ID",
+						"value": "1234"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/test/employee?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
